@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhaoren.gmall.gmallcarservice.mapper.userMapper">
+        <select id="getUserById" parameterType="java.lang.Integer" resultType="com.zhaoren.gmall.bean.User1">
+            select *from usertest where id= #{id}
+        </select>
+</mapper>

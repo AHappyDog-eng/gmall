@@ -1,0 +1,45 @@
+server:
+  port: 8081
+
+spring:
+  #数据库连接池
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/gmall?characterEncoding=UTF-8
+
+  #dubbo的注册中心配置
+  dubbo:
+    #提供服务者姓名
+    application: user-service
+    protocol:
+      #dubbo协议
+      name: dubbo
+      port: 20881
+
+    registry:
+      #dubbo地址
+      address: 192.168.188.15:2181
+      #数据传输协议
+      protocol: zookeeper
+      #dubbo 的扫描路径 注解所在的包
+    base-package: com.zhaoren.gmall
+    # provider 参数调优
+    provider:
+      timeout: 1500
+      retries: 1
+      loadbalance: random
+      threadpool: fixed
+      threads: 1000
+#mybatis 默认加载配置文件
+mybatis:
+  config-location: classpath:/mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*Mapper.xml
+
+# 日志级别
+logging:
+  #可以进行 对日志级别的更改 debug 可看zookeeper心跳同步
+  level:
+    root: info
+
