@@ -32,7 +32,7 @@
         <commons-lang3.version>3.7</commons-lang3.version>
         <mapper-starter.version>1.2.3</mapper-starter.version>
         <jedis.version>2.9.0</jedis.version>
-        <mysql.version>5.1.41</mysql.version>
+        <mysql.version>8.0.28</mysql.version>
         <beanUtils.version>1.9.3</beanUtils.version>
         <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
